@@ -1,0 +1,22 @@
+/* CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Browser Default Reset */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1rem;
+}
