@@ -1,0 +1,111 @@
+/* Custom Variable */
+
+:root {
+  --base-size: 1.05rem;
+  --type-scale: 1.15;
+  --line-height: 1.8rem;
+  --height-scale: 1.11;
+  --h5: var(--base-size);
+  --parag: calc(var(--base-size) * var(--type-scale));
+  --h4: calc(var(--parag) * var(--type-scale));
+  --h3: calc(var(--h4) * var(--type-scale));
+  --h2: calc(var(--h3) * var(--type-scale));
+  --h1: calc(var(--h2) * var(--type-scale));
+  --h5-Lheight: var(--line-height);
+  --para-Lheight: calc(var(--line-height) * var(--height-scale));
+  --h4-Lheight: calc(var(--para-Lheight) * var(--height-scale));
+  --h3-Lheight: calc(var(--h4-Lheight) * var(--height-scale));
+  --h2-Lheight: calc(var(--h3-Lheight) * var(--height-scale));
+  --h1-Lheight: calc(var(--h2-Lheight) * var(--height-scale));
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  --columns: 6;
+}
+
+[class*="col-"] {
+  --width: 6;
+  --init-gap: 1%;
+  --gap: calc((var(--width) - var(--columns)) * var(--init-gap));
+  --initial-basis: calc(var(--columns) / var(--width) * 100%);
+  flex-basis: calc(var(--initial-basis) - var(--gap));
+}
+
+/* Utilities */
+
+.container {
+  width: 100%;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+}
+
+.h1 {
+  font-size: var(--h1);
+  line-height: var(--h1-Lheight);
+}
+
+.h2 {
+  font-size: var(--h2);
+  line-height: (var(--h2-Lheight));
+}
+
+.h3 {
+  font-size: var(--h3);
+  line-height: var(--h3-Lheight);
+}
+
+.h4 {
+  font-size: var(--h4);
+  line-height: var(--h4-Lheight);
+}
+
+.h5 {
+  font-size: var(--h5);
+  line-height: var(--h5-Lheight);
+}
+
+.parag {
+  font-size: var(--parag);
+  line-height: var(--para-Lheight);
+}
+
+/* Media Query */
+
+@media only screen and (min-width: 600px) {
+  :root{
+    --type-scale: 1.2;
+    --base-size: 1.15rem;
+    --height-scale: 1.13;
+  }
+
+  .container {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  :root {
+    --type-scale: 1.25;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  :root {
+    --type-scale: 1.2;
+    --base-size: 1.35rem;
+    --height-scale: 1.15;
+  }
+  
+  .container {
+    max-width: 940px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
