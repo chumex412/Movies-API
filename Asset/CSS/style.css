@@ -1,0 +1,29 @@
+body {
+  background-image: conic-gradient( #222629, #1f2833, #0b0c10, #464866);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  _animation: rotategradient 10s ease;
+}
+
+.header {
+  background-image: linear-gradient(to right, var(--primary-color) 50%, var(--dark-p-color) 50%);
+  color: #fff;
+  padding: 0.2rem 0;
+}
+
+label {
+  color: #fff;
+}
+
+input {
+  display: block;
+  padding: 1rem;
+  width: 100%;
+  background-color: transparent;
+  color: #fff;
+  outline: 1px outset var(--dark-color);
+}
+
+input:focus {
+  outline: 1px ridge var(--prime-color)
+}
