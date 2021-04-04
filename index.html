@@ -6,18 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Movies API</title>
 
-  <!------------------- CSS ------------------------>
+  <!------------------- CSS Files------------------------>
+  <link rel="stylesheet" href="Asset/CSS/reset.css">
   <link rel="stylesheet" href="Asset/CSS/utility.css">
   <link rel="stylesheet" href="Asset/CSS/style.css">
 
 </head>
 <body>
+
+  <header class="header mb-4">
+    <nav class="container text-center mt-2">
+      <h1 class="h2 nav-brand">Movies API</h1>
+    </nav>
+  </header>
   
   <section class="container">
+    <div class="row mb-4">
+      <div class="col-3">
+        <div id="left-autocomplete">
 
+        </div>
+        <div id="left-summary"></div>
+      </div>
+      <div class="col-3">
+        <div id="right-autocomplete">
+
+        </div>
+        <div id="right-summary"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div id="movie-notification" class="col-3 notification bg-primary mx-auto text-center">
+        <h2 class="h2 title">
+          Search For A Movie on Both Sides
+        </h3>
+        <p class="parag subtitle">
+          We will tell you which is the best
+        </p>
+      </div>
+    </div>
   </section>
 
   <!------------------------ JS Files --------------------->
+  <!---<script src="Asset/JS/utils.js"></script>-->
   <script src="Asset/JS/movie.js"></script>
   <script src="Asset/JS/ui.js"></script>
   <script src="Asset/JS/app.js"></script>
